@@ -273,7 +273,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: CustomScrollView(
         slivers: [
           _buildAppBar(),
@@ -284,6 +284,8 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+// Corrected Explore Restaurants Section
 
 // App Bar with title and search
   SliverAppBar _buildAppBar() {

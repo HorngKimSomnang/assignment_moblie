@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ThemeMode/Theme_logic.dart';
+import 'package:flutter_application_1/screens/MainScreen.dart';
+import 'package:flutter_application_1/screens/splas_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_application_1/screens/MainScreen.dart'; // Your main screen
 
 void main() {
   runApp(
     ChangeNotifierProvider(
       create: (_) => ThemeLogic(), // Provide ThemeLogic to the app
-      child: const MyApp(),
+      child: Builder(builder: (context) => const MyApp()),
     ),
   );
 }

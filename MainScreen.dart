@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/accountscreen.dart';
+import 'package:flutter_application_1/screens/groceryscreen.dart';
 import 'package:flutter_application_1/screens/homescreen.dart';
 import 'package:flutter_application_1/screens/searchscreen.dart';
 
@@ -26,6 +27,7 @@ class _MainScreenState extends State<MainScreen> {
         HomeScreen(
           email: '',
         ),
+        GroceryScreen(),
         Searchscreen(),
         AccountScreen(),
       ],
@@ -52,16 +54,16 @@ class _MainScreenState extends State<MainScreen> {
           label: "Home",
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.store),
+          label: "Grocery",
+        ),
+        const BottomNavigationBarItem(
           icon: Icon(Icons.search),
           label: "Search",
         ),
-        const BottomNavigationBarItem(
+        BottomNavigationBarItem(
           icon: Icon(Icons.person),
           label: "Account",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.more_horiz),
-          label: "Menu",
         ),
       ],
     );
